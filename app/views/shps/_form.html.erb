@@ -1,0 +1,32 @@
+<%= form_for(shp) do |f| %>
+  <% if shp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shp.errors.count, "error") %> prohibited this shp from being saved:</h2>
+
+      <ul>
+      <% shp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shp_nm %>
+    <%= f.text_area :shp_nm %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shp_tel %>
+    <%= f.text_area :shp_tel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shp_add %>
+    <%= f.text_area :shp_add %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
