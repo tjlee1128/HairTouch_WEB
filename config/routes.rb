@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :shpowns
 
   namespace :api do
-    resources :shps, only: :index
+    resources :shps, only: [:index, :show]
   end
 end

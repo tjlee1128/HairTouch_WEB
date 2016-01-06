@@ -1,4 +1,4 @@
-json.array! @posts do |post|
+json.array! @shps do |shp|
   json.id shp.id
   json.shp_nm shp.shp_nm
   json.shp_tel shp.shp_tel
