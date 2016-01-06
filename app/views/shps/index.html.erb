@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shp nm</th>
+      <th>Shp tel</th>
+      <th>Shp add</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shps.each do |shp| %>
+      <tr>
+        <td><%= shp.shp_nm %></td>
+        <td><%= shp.shp_tel %></td>
+        <td><%= shp.shp_add %></td>
+        <td><%= link_to 'Show', shp %></td>
+        <td><%= link_to 'Edit', edit_shp_path(shp) %></td>
+        <td><%= link_to 'Destroy', shp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shp', new_shp_path %>

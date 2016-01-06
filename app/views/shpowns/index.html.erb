@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shpowns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shpown email</th>
+      <th>Shpown pwd</th>
+      <th>Shpown nm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shpowns.each do |shpown| %>
+      <tr>
+        <td><%= shpown.shpown_email %></td>
+        <td><%= shpown.shpown_pwd %></td>
+        <td><%= shpown.shpown_nm %></td>
+        <td><%= link_to 'Show', shpown %></td>
+        <td><%= link_to 'Edit', edit_shpown_path(shpown) %></td>
+        <td><%= link_to 'Destroy', shpown, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shpown', new_shpown_path %>

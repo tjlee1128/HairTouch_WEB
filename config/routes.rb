@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :shps
+  resources :shpowns
 
-  # Serve websocket cable requests in-process
-  # mount ActionCable.server => '/cable'
+  namespace :api do
+    resources :shps, only: :index
+  end
 end

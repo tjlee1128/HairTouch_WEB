@@ -1,0 +1,32 @@
+<%= form_for(shpown) do |f| %>
+  <% if shpown.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shpown.errors.count, "error") %> prohibited this shpown from being saved:</h2>
+
+      <ul>
+      <% shpown.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shpown_email %>
+    <%= f.text_area :shpown_email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shpown_pwd %>
+    <%= f.text_area :shpown_pwd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shpown_nm %>
+    <%= f.text_area :shpown_nm %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
