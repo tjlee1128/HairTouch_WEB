@@ -39,7 +39,7 @@ group :development do
   gem 'spring'
   gem 'guard'
   gem 'guard-minitest'
-  gem 'guard-rubocop'
+  gem 'guard-rubocop', require=false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
